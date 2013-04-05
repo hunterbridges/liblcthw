@@ -1,3 +1,5 @@
+*.dSYM
+
 build/*
 src/lcthw/*.o
 
@@ -10,3 +12,4 @@ tests/list_algos_tests
 tests/list_tests
 tests/radixmap_tests
 tests/string_algos_tests
+tests/*.log
