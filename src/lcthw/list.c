@@ -176,8 +176,8 @@ void List_split(List *list, ListNode *splitter, List **remainder, int recount) {
 
     if (recount == 0) return;
     int count = 0;
-    for (ListNode *node = (*remainder)->first; node != NULL;
-            node = node->next) {
+    ListNode *node;
+    for (node = (*remainder)->first; node != NULL; node = node->next) {
         count++;
     }
     (*remainder)->count = count;

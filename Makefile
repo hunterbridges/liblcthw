@@ -15,6 +15,9 @@ SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
 all: $(TARGET) $(SO_TARGET) tests
 	sh ./make_header.sh
 
+static: $(TARGET)
+	sh ./make_header.sh
+
 dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)
 dev: all
 
