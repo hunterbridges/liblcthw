@@ -7,8 +7,10 @@ do
 done
 
 cd build/include
+HEADERS=`ls -1`
 touch liblcthw.h
-for HEADER in `ls -1`
+
+for HEADER in $HEADERS
 do
     echo "#include \"$HEADER\"" >> liblcthw.h
 done
