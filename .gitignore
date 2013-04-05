@@ -1,0 +1,12 @@
+build/*
+src/lcthw/*.o
+
+tests/bstree_tests
+tests/d_array_tests
+tests/darray_algos_tests
+tests/hashmap_algos_tests
+tests/hashmap_tests
+tests/list_algos_tests
+tests/list_tests
+tests/radixmap_tests
+tests/string_algos_tests
