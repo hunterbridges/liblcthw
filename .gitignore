@@ -4,6 +4,11 @@
 build/*
 src/lcthw/*.o
 
+xcode/lcthw.xcodeproj/xcuserdata/*
+xcode/lcthw.xcodeproj/xcuserdata
+xcode/build
+xcode/build/*
+
 tests/bstree_tests
 tests/d_array_tests
 tests/darray_algos_tests

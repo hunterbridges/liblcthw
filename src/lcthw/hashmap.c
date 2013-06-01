@@ -73,7 +73,6 @@ void Hashmap_destroy(Hashmap *map, Hashmap_destroy_func destroy_f)
                     } else {
                         destroy_f(val);
                     }
-                    DArray_destroy(bucket);
                 }
                 DArray_destroy(bucket);
             }
