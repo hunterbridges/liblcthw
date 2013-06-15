@@ -126,7 +126,7 @@ void *List_remove(List *list, ListNode *node)
         check(list->last != NULL, "Invalid list, somehow got a next that is NULL.");
         list->last->next = NULL;
     }
-  
+
     ListNode *after = node->next;
     ListNode *before = node->prev;
     if (after) after->prev = before;
@@ -138,6 +138,15 @@ void *List_remove(List *list, ListNode *node)
 
 error:
     return result;
+}
+
+void List_remove_value(List *list, void *value) {
+    LIST_FOREACH(list, first, next, current) {
+        if (current->value != value) continue;
+
+        List_remove(list, current);
+        break;
+    }
 }
 
 void List_join(List *left, List *right) {
