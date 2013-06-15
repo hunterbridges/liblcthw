@@ -33,7 +33,7 @@ void List_unshift(List *list, void *value);
 void *List_shift(List *list);
 
 void *List_remove(List *list, ListNode *node);
-void List_remove_value(List *list, void *value);
+int List_remove_value(List *list, void *value);
 
 List *List_copy(List *list);
 void List_join(List *left, List *right);

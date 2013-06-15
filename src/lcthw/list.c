@@ -140,13 +140,17 @@ error:
     return result;
 }
 
-void List_remove_value(List *list, void *value) {
+int List_remove_value(List *list, void *value) {
+    int found = 0;
     LIST_FOREACH(list, first, next, current) {
         if (current->value != value) continue;
 
+        found = 1;
         List_remove(list, current);
         break;
     }
+
+    return found;
 }
 
 void List_join(List *left, List *right) {
