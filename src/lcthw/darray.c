@@ -36,14 +36,19 @@ void DArray_clear(DArray *array)
 
 static inline int DArray_resize(DArray *array, size_t newsize)
 {
+    size_t oldsize = array->max;
     array->max = newsize;
     check(array->max > 0, "The newsize must be > 0.");
 
-    void *contents = realloc(array->contents, array->max * sizeof(void *));
+    void **contents = realloc(array->contents, array->max * sizeof(void *));
     // check contents and assume realloc doesn't harm the original on error
 
     check_mem(contents);
-
+    int i = 0;
+    for (i = oldsize; i < newsize; i++) {
+        contents[i] = NULL;
+    }
+    
     array->contents = contents;
 
     return 0;
