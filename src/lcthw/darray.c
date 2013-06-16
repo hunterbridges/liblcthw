@@ -44,7 +44,7 @@ static inline int DArray_resize(DArray *array, size_t newsize)
     // check contents and assume realloc doesn't harm the original on error
 
     check_mem(contents);
-    int i = 0;
+    size_t i = 0;
     for (i = oldsize; i < newsize; i++) {
         contents[i] = NULL;
     }
