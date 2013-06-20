@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA5D235A17700C270044793D /* bstree.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BE816FC2EF00012C3C7 /* bstree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D235B17700C270044793D /* bstrlib.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BEA16FC2EF00012C3C7 /* bstrlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D235C17700C270044793D /* darray.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BEC16FC2EF00012C3C7 /* darray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D235D17700C270044793D /* darray_algos.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BEE16FC2EF00012C3C7 /* darray_algos.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D235E17700C270044793D /* dbg.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BEF16FC2EF00012C3C7 /* dbg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D235F17700C270044793D /* hashmap.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BF116FC2EF00012C3C7 /* hashmap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D236017700C270044793D /* hashmap_algos.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BF316FC2EF00012C3C7 /* hashmap_algos.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D236117700C270044793D /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BF516FC2EF00012C3C7 /* list.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D236217700C270044793D /* list_algos.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BF816FC2EF00012C3C7 /* list_algos.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D236317700C270044793D /* radixmap.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BFA16FC2EF00012C3C7 /* radixmap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D236417700C270044793D /* string_algos.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BFC16FC2EF00012C3C7 /* string_algos.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D236617700C270044793D /* bstree.c in Sources */ = {isa = PBXBuildFile; fileRef = CABF2BE716FC2EF00012C3C7 /* bstree.c */; };
+		CA5D236717700C270044793D /* bstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = CABF2BE916FC2EF00012C3C7 /* bstrlib.c */; };
+		CA5D236817700C270044793D /* darray.c in Sources */ = {isa = PBXBuildFile; fileRef = CABF2BEB16FC2EF00012C3C7 /* darray.c */; };
+		CA5D236917700C270044793D /* darray_algos.c in Sources */ = {isa = PBXBuildFile; fileRef = CABF2BED16FC2EF00012C3C7 /* darray_algos.c */; };
+		CA5D236A17700C270044793D /* hashmap.c in Sources */ = {isa = PBXBuildFile; fileRef = CABF2BF016FC2EF00012C3C7 /* hashmap.c */; };
+		CA5D236B17700C270044793D /* hashmap_algos.c in Sources */ = {isa = PBXBuildFile; fileRef = CABF2BF216FC2EF00012C3C7 /* hashmap_algos.c */; };
+		CA5D236C17700C270044793D /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = CABF2BF416FC2EF00012C3C7 /* list.c */; };
+		CA5D236D17700C270044793D /* list_algos.c in Sources */ = {isa = PBXBuildFile; fileRef = CABF2BF716FC2EF00012C3C7 /* list_algos.c */; };
+		CA5D236E17700C270044793D /* radixmap.c in Sources */ = {isa = PBXBuildFile; fileRef = CABF2BF916FC2EF00012C3C7 /* radixmap.c */; };
+		CA5D236F17700C270044793D /* string_algos.c in Sources */ = {isa = PBXBuildFile; fileRef = CABF2BFB16FC2EF00012C3C7 /* string_algos.c */; };
+		CA5D237117700C270044793D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABF2BD716FC2ECF0012C3C7 /* Foundation.framework */; };
 		CA7F75AB16FC35CC00DBE986 /* bstree.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BE816FC2EF00012C3C7 /* bstree.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA7F75AC16FC35CC00DBE986 /* bstrlib.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BEA16FC2EF00012C3C7 /* bstrlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA7F75AD16FC35CC00DBE986 /* darray.h in Headers */ = {isa = PBXBuildFile; fileRef = CABF2BEC16FC2EF00012C3C7 /* darray.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,6 +54,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		CA5D237217700C270044793D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CABF2BD216FC2ECF0012C3C7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA5D237617700C270044793D /* liblcthw-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "liblcthw-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABF2BD416FC2ECF0012C3C7 /* liblcthw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblcthw.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABF2BD716FC2ECF0012C3C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CABF2BDB16FC2ECF0012C3C7 /* lcthw-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lcthw-Prefix.pch"; sourceTree = "<group>"; };
@@ -71,6 +103,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA5D237017700C270044793D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA5D237117700C270044793D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CABF2BD116FC2ECF0012C3C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				CABF2BD416FC2ECF0012C3C7 /* liblcthw.a */,
+				CA5D237617700C270044793D /* liblcthw-mac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +190,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		CA5D235917700C270044793D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA5D235A17700C270044793D /* bstree.h in Headers */,
+				CA5D235B17700C270044793D /* bstrlib.h in Headers */,
+				CA5D235C17700C270044793D /* darray.h in Headers */,
+				CA5D235D17700C270044793D /* darray_algos.h in Headers */,
+				CA5D235E17700C270044793D /* dbg.h in Headers */,
+				CA5D235F17700C270044793D /* hashmap.h in Headers */,
+				CA5D236017700C270044793D /* hashmap_algos.h in Headers */,
+				CA5D236117700C270044793D /* list.h in Headers */,
+				CA5D236217700C270044793D /* list_algos.h in Headers */,
+				CA5D236317700C270044793D /* radixmap.h in Headers */,
+				CA5D236417700C270044793D /* string_algos.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA7F75AA16FC35BB00DBE986 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,6 +229,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		CA5D235817700C270044793D /* lcthw-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA5D237317700C270044793D /* Build configuration list for PBXNativeTarget "lcthw-mac" */;
+			buildPhases = (
+				CA5D235917700C270044793D /* Headers */,
+				CA5D236517700C270044793D /* Sources */,
+				CA5D237017700C270044793D /* Frameworks */,
+				CA5D237217700C270044793D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "lcthw-mac";
+			productName = liblcthw;
+			productReference = CA5D237617700C270044793D /* liblcthw-mac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		CABF2BD316FC2ECF0012C3C7 /* lcthw */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CABF2BE216FC2ECF0012C3C7 /* Build configuration list for PBXNativeTarget "lcthw" */;
@@ -210,11 +287,29 @@
 			projectRoot = "";
 			targets = (
 				CABF2BD316FC2ECF0012C3C7 /* lcthw */,
+				CA5D235817700C270044793D /* lcthw-mac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA5D236517700C270044793D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA5D236617700C270044793D /* bstree.c in Sources */,
+				CA5D236717700C270044793D /* bstrlib.c in Sources */,
+				CA5D236817700C270044793D /* darray.c in Sources */,
+				CA5D236917700C270044793D /* darray_algos.c in Sources */,
+				CA5D236A17700C270044793D /* hashmap.c in Sources */,
+				CA5D236B17700C270044793D /* hashmap_algos.c in Sources */,
+				CA5D236C17700C270044793D /* list.c in Sources */,
+				CA5D236D17700C270044793D /* list_algos.c in Sources */,
+				CA5D236E17700C270044793D /* radixmap.c in Sources */,
+				CA5D236F17700C270044793D /* string_algos.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CABF2BD016FC2ECF0012C3C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +330,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		CA5D237417700C270044793D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DSTROOT = /tmp/liblcthw.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "liblcthw/lcthw-Prefix.pch";
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = ./src/;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "lcthw-mac";
+				SDKROOT = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CA5D237517700C270044793D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DSTROOT = /tmp/liblcthw.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "liblcthw/lcthw-Prefix.pch";
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = ./src/;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "lcthw-mac";
+				SDKROOT = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		CABF2BE016FC2ECF0012C3C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -316,6 +443,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA5D237317700C270044793D /* Build configuration list for PBXNativeTarget "lcthw-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA5D237417700C270044793D /* Debug */,
+				CA5D237517700C270044793D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CABF2BCF16FC2ECF0012C3C7 /* Build configuration list for PBXProject "lcthw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

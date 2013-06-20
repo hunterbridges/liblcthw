@@ -68,15 +68,16 @@ void Hashmap_destroy(Hashmap *map, Hashmap_destroy_func destroy_f)
                 if (!bucket) continue;
                 for (j = 0; j < DArray_count(bucket); j++) {
                   void *val = DArray_get(bucket, j);
-                    if (destroy_f == NULL) {
-                        free(val);
-                    } else {
+                    if (destroy_f != NULL) {
                         HashmapNode *node = val;
                         destroy_f(node->data);
                     }
+                    
+                    free(val);
                 }
                 DArray_destroy(bucket);
             }
+            DArray_destroy(map->buckets);
         }
 
         free(map);
