@@ -25,8 +25,9 @@ error:
     return NULL;
 }
 
-static int BSTree_destroy_cb(BSTreeNode *node)
+static int BSTree_destroy_cb(BSTreeNode *node, void *context)
 {
+    (void)(context);
     free(node);
     return 0;
 }
@@ -34,7 +35,7 @@ static int BSTree_destroy_cb(BSTreeNode *node)
 void BSTree_destroy(BSTree *map)
 {
     if (map) {
-        BSTree_traverse(map, BSTree_destroy_cb);
+        BSTree_traverse(map, BSTree_destroy_cb, NULL);
         free(map);
     }
 }
@@ -123,27 +124,27 @@ void *BSTree_get(BSTree *map, void *key)
 }
 
 static inline int BSTree_traverse_nodes(BSTreeNode *node,
-        BSTree_traverse_cb traverse_cb)
+        BSTree_traverse_cb traverse_cb, void *context)
 {
     int rc = 0;
 
     if (node->left) {
-        rc = BSTree_traverse_nodes(node->left, traverse_cb);
+        rc = BSTree_traverse_nodes(node->left, traverse_cb, context);
         if (rc != 0) return rc;
     }
 
     if (node->right) {
-        rc = BSTree_traverse_nodes(node->right, traverse_cb);
+        rc = BSTree_traverse_nodes(node->right, traverse_cb, context);
         if (rc != 0) return rc;
     }
 
-    return traverse_cb(node);
+    return traverse_cb(node, context);
 }
 
-int BSTree_traverse(BSTree *map, BSTree_traverse_cb traverse_cb)
+int BSTree_traverse(BSTree *map, BSTree_traverse_cb traverse_cb, void *context)
 {
     if (map->root) {
-        return BSTree_traverse_nodes(map->root, traverse_cb);
+        return BSTree_traverse_nodes(map->root, traverse_cb, context);
     }
 
     return 0;

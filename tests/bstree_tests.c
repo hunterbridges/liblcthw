@@ -14,7 +14,7 @@ struct tagbstring expect1 = bsStatic("THE VALUE 1");
 struct tagbstring expect2 = bsStatic("THE VALUE 2");
 struct tagbstring expect3 = bsStatic("THE VALUE 3");
 
-static int traverse_good_cb(BSTreeNode *node)
+static int traverse_good_cb(BSTreeNode *node, void *context)
 {
     debug("KEY: %s", bdata((bstring)node->key));
     traverse_called++;
@@ -22,7 +22,7 @@ static int traverse_good_cb(BSTreeNode *node)
 }
 
 
-static int traverse_fail_cb(BSTreeNode *node)
+static int traverse_fail_cb(BSTreeNode *node, void *context)
 {
     debug("KEY: %s", bdata((bstring)node->key));
     traverse_called++;
@@ -72,12 +72,12 @@ char *test_get_set()
 
 char *test_traverse()
 {
-    int rc = BSTree_traverse(map, traverse_good_cb);
+    int rc = BSTree_traverse(map, traverse_good_cb, NULL);
     mu_assert(rc == 0, "Failed to traverse.");
     mu_assert(traverse_called == 3, "Wrong count traverse.");
 
     traverse_called = 0;
-    rc = BSTree_traverse(map, traverse_fail_cb);
+    rc = BSTree_traverse(map, traverse_fail_cb, NULL);
     mu_assert(rc == 1, "Failed to traverse.");
     mu_assert(traverse_called == 2, "Wrong count traverse for fail.");
 
