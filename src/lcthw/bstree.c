@@ -79,12 +79,14 @@ static inline void BSTree_setnode(BSTree *map, BSTreeNode *node, void *key,
 int BSTree_set(BSTree *map, void *key, void *data)
 {
     if (map->root == NULL) {
-        // first so just make it and get
+        // first so just make it and get out
         map->root = BSTreeNode_create(NULL, key, data);
         check_mem(map->root);
     } else {
         BSTree_setnode(map, map->root, key, data);
     }
+    
+    map->count++;
 
     return 0;
 error:
@@ -205,6 +207,8 @@ static inline BSTreeNode *BSTree_node_delete(BSTree *map, BSTreeNode *node,
             return NULL;
         }
     } else {
+        map->count--;
+        
         if (node->left && node->right) {
             // swap this node for the smallest node that is bigger than us
             BSTreeNode *successor = BSTree_find_min(node->right);
@@ -223,7 +227,7 @@ static inline BSTreeNode *BSTree_node_delete(BSTree *map, BSTreeNode *node,
         } else {
             BSTree_replace_node_in_parent(map, node, NULL);
         }
-
+        
         return node;
     }
 }
